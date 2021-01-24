@@ -1,0 +1,24 @@
+ {% extends 'portfolio/base.html'%}
+
+{% block content%}
+
+<div class="container text-center">
+<h1> Khang's Portfolio </h1>
+
+{% load static %}
+
+
+
+<img src="{% static 'portfolio/2016.jpg' %}">
+
+{% for project in projects %}
+
+<a href="{{project.url}}"><h2> {{ project.title }} </h2> </a>
+<p> {{ project.description }} </p>
+<img src=" {{project.image.url}}" class="img-fluid mb-2">
+
+{% endfor %}
+
+{% endblock %}
+
+</div>  
